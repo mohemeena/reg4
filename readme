@@ -25,6 +25,37 @@ assignment solution: sources of information." Write "None" to indicate
 that you used no written sources of information other than the lecture
  material.
 
+Learning about argparse:
+https://docs.python.org/3/library/argparse.html
+
+https://www.golinuxcloud.com/python-argparse/#1_Basic_Imports_and_Initialization
+
+How to write a dictionary:
+https://www.geeksforgeeks.org/python/how-to-create-a-dictionary-in-python/
+
+Textwrap module:
+https://docs.python.org/3/library/textwrap.html
+https://www.geeksforgeeks.org/python/textwrap-text-wrapping-filling-python/
+https://runebook.dev/en/docs/python/library/textwrap/textwrap.TextWrapper.subsequent_indent
+
+Object comparison:
+https://www.geeksforgeeks.org/python/python-not-equal-operator/
+
+Checking if object is a particular type:
+https://www.geeksforgeeks.org/python/check-if-a-variable-is-string-python/
+
+Selecting key exists in dict:
+https://www.geeksforgeeks.org/python/python-check-given-key-already-exists-in-a-dictionary/
+
+Printing keys in dict:
+https://stackoverflow.com/questions/48894060/how-to-print-the-value-of-a-specific-key-from-a-dictionary
+
+Time delay:
+https://www.geeksforgeeks.org/python/how-to-add-time-delay-in-python/
+
+HTML Form Formatting:
+ https://stackoverflow.com/questions/48414841/how-to-display-html-form-next-to-each-other-and-in-rows
+
 [Enter your reply here.]
 
 A description of the help that you received from generative AI while
