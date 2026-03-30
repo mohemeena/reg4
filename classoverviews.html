@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Browser title -->
+        <title>
+            Registrar's Office Class Search
+        </title>
+
+    </head>
+    <body>
+        <!-- Registrar's Office Heading -->
+        {% include 'header.html' %}
+
+        <!-- Search Form -->
+        <h2>Class Search</h2>
+        <hr>
+
+        <form action="/classoverviews" method="get">
+        <table>
+            <tr>
+                <td align="right">Dept:</td>
+                <td>
+                <input id="deptInput" type="text" name="dept" value="{{dept}}" autofocus>
+                </td>
+            </tr>
+            <tr>
+               <td align="right">Number:</td> 
+               <td>
+               <input id="coursenumInput" type="text" name="coursenum" value="{{coursenum}}">
+               </td>
+            </tr>
+            <tr>
+                <td align="right">Area:</td>
+                <td>
+                <input id="areaInput" type="text" name="area" value="{{area}}">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Title:</td>
+                <td>
+                <input id="titleInput" type="text" name="title" value="{{title}}">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                <input id="submitButton" type="submit" value="Go">
+                </td>
+            </tr>
+        </table>
+        </form>
+        <hr>
+
+        <!-- Print table -->
+            <table id="overviewsTable" border="1">
+            <thead>
+                <tr>
+                    <td><b>ClassId</b></td>
+                    <td><b>Dept</b></td>
+                    <td><b>Num</b></td>
+                    <td><b>Area</b></td>
+                    <td><b>Title</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in overviews %}
+                <tr>
+                    <td><a href="/regdetails?classid={{ course.classid }}">{{ course.classid }}</a></td>
+                    <td>{{course["dept"]}}</td>
+                    <td>{{course["coursenum"]}}</td>
+                    <td>{{course["area"]}}</td>
+                    <td>{{course["title"]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            <br>
+        <!-- Created by Mohemeen Ahmed & Amel Osman footer-->
+        {% include 'footer.html' %}
+
+        'use strict';
+
+        function convertToHtml()
+    </body>
+</html>
