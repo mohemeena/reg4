@@ -80,6 +80,19 @@
 
         'use strict';
 
-        function convertToHtml()
+        function convertToHtml(overviews) {
+            let template = '
+                {{#overviews}}
+                    {{course.classid}}:
+                    {{course["dept"]}}:
+                    {{course["coursenum"]}:
+                    {{course["area"]}}:
+                    {{course["title"]}}
+                {{/overviews}}
+            '
+            let map = {overviews: overviews};
+            let html = Mustache.render(template, map);
+            return html;
+        }
     </body>
 </html>
