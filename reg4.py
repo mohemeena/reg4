@@ -76,12 +76,18 @@ def classoverviews():
         json_doc = json.dumps(overviews_output[1])
 
         # Create response
-        response = flask.make_response(html_code)
+        response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
 
     # If it was not successful, send to the error page
 
-        ## HANDLE ERRORS ##
+       #
+        #
+        #
+         ## HANDLE ERRORS ##
+        #
+        #
+        #
 
     else:
         html_code = flask.render_template('error.html',
@@ -125,6 +131,13 @@ def classdetails():
 
     classid = flask.request.args.get('classid')
 
+       #
+        #
+        #
+         ## HANDLE ERRORS ##
+        #
+        #
+        #
     # Handling missing classid error
     if classid is None or classid == '':
         html_code = flask.render_template(
@@ -154,14 +167,18 @@ def classdetails():
         json_doc = json.dumps(details_output[1])
 
         # Create response
-        response = flask.make_response(html_code)
+        response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
 
     # If it was not successful, send to the error page
     else:
-
+        #
+        #
+        #
          ## HANDLE ERRORS ##
-         
+        #
+        #
+        #
         html_code = flask.render_template('error.html',
             error_message = f'no class with classid {classid} exists')
         response = flask.make_response(html_code)
