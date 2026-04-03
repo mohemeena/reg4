@@ -7,6 +7,7 @@ overviews and details, and outputs them to be displayed on the proper
 HTML file. """
 import flask
 import database
+import json
 
 #-----------------------------------------------------------------------
 app = flask.Flask(__name__, template_folder='.')
@@ -16,7 +17,7 @@ app = flask.Flask(__name__, template_folder='.')
 # Class Overviews Page (Home Page):
 #-----------------------------------------------------------------------
 @app.route('/', methods={'GET'})
-@app.route('/classoverviews', methods={'GET'})
+@app.route('/index', methods={'GET'})
 def classoverviews():
     """ Method that extracts overviews from the database and
     sends to the classoverviews.html file to be displayed. """
