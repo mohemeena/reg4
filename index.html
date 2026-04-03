@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrar's Office Class Search</title>
+    </head>
+
+    <body>
+        <!--sticky header : class search and inputs -->
+        <hr>
+        <h1>Registrar's Office Class Search</h1>
+        <hr>
+
+        <form action="/classoverviews" method="get">
+        <div class="form-input">
+            <div class="form-cell">
+                <label>Department</label>
+                <input id="deptInput" type="text" name="dept" value="{{dept}}" autofocus>
+            </div>
+
+            <div class="form-cell">
+                <label>Number</label>
+                <input id="coursenumInput" type="text" name="coursenum" value="{{coursenum}}">
+            </div>
+
+            <div class="form-cell">
+                <label>Area</label>
+                <input id="areaInput" type="text" name="area" value="{{area}}" autofocus>
+            </div>
+
+            <div class="form-cell">
+                <label>Title</label>
+                <input id="titleInput" type="text" name="title" value="{{title}}">
+            </div>
+        </form>
+
+        <!-- need to display the class overviews table here dynamically -->
+         
+
+    
+
+
+        <!-- end of class overviews table -->
+
+        <hr>
+        Created by Mohemeen Ahmed and Amel Osman.
+        <hr>
+
+        <!-- end of html code-->
+
+        <!-- start of javascript code-->
+        <script src=
+            "https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js">
+        </script>
+
+
+        
+    </body>
+</html>
