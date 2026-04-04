@@ -17,15 +17,16 @@ app = flask.Flask(__name__, template_folder='.')
 # Home Page
 #-----------------------------------------------------------------------
 
-@app.route('/', methods={'GET'})
-@app.route('/index', methods={'GET'})
+@app.route('/', methods=['GET'])
+@app.route('/index', methods=['GET'])
 def index():
+
     return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
 # Class Overviews Results 
 #-----------------------------------------------------------------------
-@app.route('/classoverviews', methods={'GET'})
+@app.route('/classoverviews', methods=['GET'])
 def classoverviews():
     """ Method that extracts overviews from the database and
     sends to the classoverviews.html file to be displayed. """
@@ -92,7 +93,7 @@ def classoverviews():
 #-----------------------------------------------------------------------
 # Course Details Page:
 #-----------------------------------------------------------------------
-@app.route('/regdetails', methods={'GET'})
+@app.route('/regdetails', methods=['GET'])
 
 def classdetails():
     """ Method that extracts classdetails from the database
