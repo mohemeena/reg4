@@ -14,10 +14,18 @@ app = flask.Flask(__name__, template_folder='.')
 #-----------------------------------------------------------------------
 
 #-----------------------------------------------------------------------
-# Class Overviews Page (Home Page):
+# Home Page
 #-----------------------------------------------------------------------
+
 @app.route('/', methods={'GET'})
 @app.route('/index', methods={'GET'})
+def index():
+    return flask.send_file('index.html')
+
+#-----------------------------------------------------------------------
+# Class Overviews Results 
+#-----------------------------------------------------------------------
+@app.route('/classoverviews', methods={'GET'})
 def classoverviews():
     """ Method that extracts overviews from the database and
     sends to the classoverviews.html file to be displayed. """
@@ -26,41 +34,24 @@ def classoverviews():
     dept = flask.request.args.get('dept')
     if dept is None:
         dept = ''
-
-    if dept == '':
-        prev_dept = ''
-    else:
-        prev_dept = dept
+    dept = dept.strip()
 
     # Get the course number inquiry
     coursenum = flask.request.args.get('coursenum')
     if coursenum is None:
         coursenum = ''
-
-    if coursenum == '':
-        prev_coursenum = ''
-    else:
-        prev_coursenum = coursenum
+    coursenum = coursenum.strip()
 
     # Get the area inquiry
     area = flask.request.args.get('area')
     if area is None:
         area = ''
-
-    if area == '':
-        prev_area = ''
-    else:
-        prev_area = area
+    area = area.strip()
 
     # Get the title inquiry
     title = flask.request.args.get('title')
     if title is None:
         title = ''
-
-    if title == '':
-        prev_title = ''
-    else:
-        prev_title = title
 
     query = {
         'dept': dept,
@@ -94,12 +85,6 @@ def classoverviews():
         html_code = flask.render_template('error.html',
             error_message = overviews_output[1])
         response = flask.make_response(html_code)
-
-    # Set cookies
-    response.set_cookie('prev_dept', prev_dept)
-    response.set_cookie('prev_coursenum', prev_coursenum)
-    response.set_cookie('prev_area', prev_area)
-    response.set_cookie('prev_title', prev_title)
 
     return response
 

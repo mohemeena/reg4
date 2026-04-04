@@ -82,14 +82,29 @@
 
         function convertToHtml(overviews) {
             let template = '
+            <table>
+            <thead>
+                <tr>
+                    <td><b>ClassId</b></td>
+                    <td><b>Dept</b></td>
+                    <td><b>Num</b></td>
+                    <td><b>Area</b></td>
+                    <td><b>Title</b></td>
+                </tr>
+            </thead>
+            <tbody>
                 {{#overviews}}
-                    {{course.classid}}:
-                    {{course["dept"]}}:
-                    {{course["coursenum"]}:
-                    {{course["area"]}}:
-                    {{course["title"]}}
+                <tr>
+                    <td>{{course.classid}}</td>
+                    <td>{{course["dept"]}}</td>
+                    <td>{{course["coursenum"]}}</td>
+                    <td>{{course["area"]}}</td>
+                    <td>{{course["title"]}}</td>
+                </tr>
                 {{/overviews}}
-            '
+            </tbody>
+            </table>
+            ';
             let map = {overviews: overviews};
             let html = Mustache.render(template, map);
             return html;

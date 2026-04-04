@@ -50,11 +50,37 @@
         <script>
             'use strict';
 
-            function convertToHtml(overviews){
-                let template = '
-
-                '
+            function convertToHtml(overviews) {
+                let template = `
+                <table>
+                <thead>
+                    <tr>
+                        <td><b>ClassId</b></td>
+                        <td><b>Dept</b></td>
+                        <td><b>Num</b></td>
+                        <td><b>Area</b></td>
+                        <td><b>Title</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#overviews}}
+                    <tr>
+                        <td>{{course.classid}}</td>
+                        <td>{{course["dept"]}}</td>
+                        <td>{{course["coursenum"]}}</td>
+                        <td>{{course["area"]}}</td>
+                        <td>{{course["title"]}}</td>
+                    </tr>
+                    {{/overviews}}
+                </tbody>
+                </table>
+                `;
+                let map = {overviews: overviews}
+                let html = Mustache.render(template, map);
+                return html;
             }
+        
+
 
             function handleResponse(){
                 if(this.status !== 200){
@@ -90,7 +116,8 @@
                 let title = titleInput.value;
                 let encodedTitle = encodeURIComponent(title);
 
-                let url = ''
+                let url = '/courseoverviews?dept=' + encodedDept + '?coursenum=' + encodedCourseNum +
+                '?area=' + encodedArea + '?title=' + encodedTitle;
 
                 if (request !== null)
                     request.abort();
@@ -114,6 +141,11 @@
                 let coursenumInput = document.getElementById('coursenumInput');
                 let areaInput = document.getElementById('areaInput');
                 let titleInput = document.getElementById('titleInput'); 
+                deptInput.addEventListener('input', debouncedGetResults);
+                coursenumInput.addEventListener('input', debouncedGetResults);
+                areaInput.addEventListener('input', debouncedGetResults);
+                titleInput.addEventListener('input', debouncedGetResults);
+                
             }
 
             document.addEventListener('DOMContentLoaded', setup);
