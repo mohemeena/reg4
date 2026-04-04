@@ -61,16 +61,26 @@ def classoverviews():
         'title': title
     }
 
-    overviews_output = database.get_overviews(query)
+    if dept == '' and coursenum == '' and area == '' and title == '':
+        overviews = []
+    else:
+        overviews_output = database.get_overviews(query)
+        overviews = overviews_output[1]
+
+
+    json_doc = json.dumps(overviews)
+    response = flask.make_response(json_doc)
+    response.headers['Content-Type'] = 'application/json'
+    return response
 
     # If the database query was successful, display with HTML
-    if overviews_output[0] is True:
+    #if overviews_output[0] is True:
         # Convert to JSON
-        json_doc = json.dumps(overviews_output[1])
+       # json_doc = json.dumps(overviews_output[1])
 
         # Create response
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
+        #response = flask.make_response(json_doc)
+        #response.headers['Content-Type'] = 'application/json'
 
     # If it was not successful, send to the error page
 
@@ -82,12 +92,10 @@ def classoverviews():
         #
         #
 
-    else:
-        html_code = flask.render_template('error.html',
-            error_message = overviews_output[1])
-        response = flask.make_response(html_code)
-
-    return response
+    #else:
+        #html_code = flask.render_template('error.html',
+            #error_message = overviews_output[1])
+        #response = flask.make_response(html_code)
 
 
 #-----------------------------------------------------------------------
