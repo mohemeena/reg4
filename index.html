@@ -116,8 +116,7 @@
                 let title = titleInput.value;
                 let encodedTitle = encodeURIComponent(title);
 
-                let url = '/courseoverviews?dept=' + encodedDept + '&coursenum=' + encodedCourseNum +
-                '&area=' + encodedArea + '&title=' + encodedTitle;
+                let url = '/searchresults?dept=' + encodedDept;
 
                 if (request !== null)
                     request.abort();
