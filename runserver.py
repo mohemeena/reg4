@@ -7,7 +7,7 @@ our flask program. """
 
 import sys
 import argparse
-import reg3
+import reg4
 
 def main():
     parser = argparse.ArgumentParser(description=
