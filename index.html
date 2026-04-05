@@ -80,15 +80,6 @@
         <script>
             'use strict';
 
-            if (request !== null)
-                    request.abort();
-
-            request = new XMLHttpRequest();
-            request.onload = handleOverviewsResponse;
-            request.onerror = handleError;
-            request.open('GET', url);
-            request.send();
-
             
             function convertToHtmlOverviews(overviews) {
                 let template = `
