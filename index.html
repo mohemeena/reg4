@@ -139,6 +139,35 @@
                             <td><strong>Room</strong></td>
                             <td>{{roomnum}}</td>
                         </tr>
+                        <h2> Course Details </h2>
+                        {{#details}} 
+
+                        <tr>
+                            <td><strong>Course Id</strong></td>
+                            <td>{{courseid}}</td>
+                        </tr>
+                        <tr>
+                            {{#deptcoursenums}}
+                            <td><strong>Dept and Number</strong></td>
+                            <td>{{dept}} {{coursenum}}</td>
+                            {{/deptcoursenums}}
+                        </tr>
+                        <tr>
+                            <td><strong>Area</strong></td>
+                            <td>{{area}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Title</strong></td>
+                            <td>{{title}}</td>   
+                        </tr>
+                        <tr>
+                            <td><strong>Description</strong></td>
+                            <td>{{descrip}}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Prerequisites</strong></td>
+                            <td>{{prereqs}}</td>
+                        </tr>
                         <tr>
                             {{#profnames}}
                             <td><strong>Professor</strong></td>
