@@ -16,10 +16,10 @@
     </head>
     <body>
         <!--sticky header : class search and inputs -->
-        <div class="flex-container">
+        <div class="container-fluid">
             <h1>Registrar's Office: Class Search</h1>
             <form>
-                <div class="form-input">
+                <div class="flex-container">
                     <div class="form-cell">
                         <input id="deptInput" type="text" name="dept" value="" placeholder="Department" autofocus>
                     </div>
@@ -288,11 +288,14 @@
         </script>
 
         <style>
-           .flex-container{
+           .container-fluid{
                 background-color:rgb(40, 89, 144);
                 position: sticky; top:0;
                 padding-bottom:50px;
-                display: flex;
+           }
+
+           .flex-container{
+            display:flex;
            }
 
             h1{
