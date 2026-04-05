@@ -22,10 +22,10 @@ app = flask.Flask(__name__, template_folder='.')
 def index():
 
     query = {
-        'dept': dept,
-        'coursenum': coursenum,
-        'area': area,
-        'title': title
+        'dept': '',
+        'coursenum': '',
+        'area': '',
+        'title': ''
     }
 
     overviews_output = database.get_overviews(query)
