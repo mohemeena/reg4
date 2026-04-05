@@ -91,13 +91,13 @@ def regdetails():
     classid = flask.request.args.get('classid')
 
     # Handling missing classid error
-    if classid is None or classid == '':
-        details_output = [False, "missing class id"]
-        json_doc = json.dumps(details_output)
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
-        return response
-        html_code = flask.render_template(
+    #if classid is None or classid == '':
+        #details_output = [False, "missing class id"]
+        #json_doc = json.dumps(details_output)
+        #response = flask.make_response(json_doc)
+        #response.headers['Content-Type'] = 'application/json'
+        #return response
+        #html_code = flask.render_template(
             #'error.html',
             #error_message='missing classid'
         #)
