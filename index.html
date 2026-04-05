@@ -94,7 +94,7 @@
                 <tbody>
                     {{#overviews}}
                     <tr>
-                        <td><button id="buttonclassid" onclick="getResults(classid)">{{classid}}</button></td>
+                        <td><button id="buttonclassid" onclick="getResultsDetails(classid)">{{classid}}</button></td>
                         <td>{{dept}}</td>
                         <td>{{coursenum}}</td>
                         <td>{{area}}</td>
@@ -156,7 +156,7 @@
         
 
 
-            function handleResponse(){
+            function handleOverviewsResponse(){
                 if(this.status !== 200){
                     alert('Error: Failed to fetch data from server');
                     return
@@ -166,7 +166,13 @@
                 let htmlOverviews = convertToHtmlOverviews(overviews);
                 let resultsDiv = document.getElementById('resultsDiv');
                 resultsDiv.innerHTML = htmlOverviews;
+            }
 
+            function handleDetailsResponse(){
+                if(this.status !== 200){
+                    alert('Error: Failed to fetch data from server');
+                    return
+                }
                 let details = JSON.parse(this.response);
                 let htmlDetails = convertToHtmlDetails(details);
                 let detailsModalBodyNode = document.getElementById('detailsModalBody');
@@ -182,7 +188,7 @@
             }
             let request = null;
 
-            function getResults(){
+            function getOverviewsResults(){
                 let deptInput = document.getElementById('deptInput');
                 let dept = deptInput.value;
                 let encodedDept = encodeURIComponent(dept);
@@ -206,7 +212,22 @@
                     request.abort();
 
                 request = new XMLHttpRequest();
-                request.onload = handleResponse;
+                request.onload = handleOverviewsResponse;
+                request.onerror = handleError;
+                request.open('GET', url);
+                request.send();
+            }
+
+            function getResultsDetails(classid){
+                
+                let encodedClassId = encodeURIComponent(classid);
+                let url = '/regdetails?classid=' + encodedClassId;
+
+                if (request !== null)
+                    request.abort();
+
+                request = new XMLHttpRequest();
+                request.onload = handleDetailsResponse;
                 request.onerror = handleError;
                 request.open('GET', url);
                 request.send();
@@ -216,7 +237,7 @@
 
             function debouncedGetResults() {
                 clearTimeout(timer);
-                timer = window.setTimeout(getResults, 500);
+                timer = window.setTimeout(getOverviewsResults, 500);
             }
 
             function setup(){

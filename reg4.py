@@ -20,7 +20,7 @@ app = flask.Flask(__name__, template_folder='.')
 @app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
 def index():
-    
+
     return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
@@ -98,29 +98,11 @@ def search_results():
 # Course Details Page:
 #-----------------------------------------------------------------------
 @app.route('/regdetails', methods=['GET'])
-
-def classdetails():
+def regdetails():
     """ Method that extracts classdetails from the database
     and sends to the regdetails.html file to be displayed. """
 
-    # Getting previous searches from cookies
-    prev_dept = flask.request.cookies.get('prev_dept')
-    if prev_dept is None:
-        prev_dept = ''
-
-    prev_coursenum = flask.request.cookies.get('prev_coursenum')
-    if prev_coursenum is None:
-        prev_coursenum = ''
-
-    prev_area = flask.request.cookies.get('prev_area')
-    if prev_area is None:
-        prev_area = ''
-
-    prev_title = flask.request.cookies.get('prev_title')
-    if prev_title is None:
-        prev_title = ''
-
-    classid = flask.request.args.get('classid')
+    classid = flask.request.args.get('buttonclassid')
 
        #
         #
