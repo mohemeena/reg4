@@ -94,7 +94,7 @@
                 <tbody>
                     {{#overviews}}
                     <tr>
-                        <td><button id="buttonclassid" onclick="getResultsDetails(classid)">{{classid}}</button></td>
+                        <td><button id="buttonclassid" onclick="getResults(classid)">{{classid}}</button></td>
                         <td>{{dept}}</td>
                         <td>{{coursenum}}</td>
                         <td>{{area}}</td>
@@ -167,6 +167,7 @@
                 let resultsDiv = document.getElementById('resultsDiv');
                 resultsDiv.innerHTML = htmlOverviews;
 
+                let details = JSON.parse(this.response);
                 let htmlDetails = convertToHtmlDetails(details);
                 let detailsModalBodyNode = document.getElementById('detailsModalBody');
                 detailsModalBodyNode.innerHTML = htmlDetails;
