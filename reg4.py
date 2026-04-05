@@ -61,12 +61,8 @@ def search_results():
         'title': title
     }
 
-    if dept == '' and coursenum == '' and area == '' and title == '':
-        overviews = []
-    else:
-        overviews_output = database.get_overviews(query)
-        overviews = overviews_output[1]
-
+    overviews_output = database.get_overviews(query)
+    overviews = overviews_output[1]
 
     json_doc = json.dumps(overviews)
     response = flask.make_response(json_doc)
