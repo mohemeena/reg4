@@ -17,6 +17,7 @@ app = flask.Flask(__name__, template_folder='.')
 # Home Page
 #-----------------------------------------------------------------------
 
+@app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
 def index():
 
@@ -25,7 +26,6 @@ def index():
 #-----------------------------------------------------------------------
 # Class Overviews Results 
 #-----------------------------------------------------------------------
-@app.route('/', methods=['GET'])
 @app.route('/searchresults', methods=['GET'])
 def search_results():
     """ Method that extracts overviews from the database and
