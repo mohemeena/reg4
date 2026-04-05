@@ -20,7 +20,6 @@ app = flask.Flask(__name__, template_folder='.')
 @app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
 def index():
-
     return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
@@ -30,6 +29,15 @@ def index():
 def search_results():
     """ Method that extracts overviews from the database and
     sends to the classoverviews.html file to be displayed. """
+    query = {
+        'dept': dept,
+        'coursenum': coursenum,
+        'area': area,
+        'title': title
+    }
+
+    overviews_output = database.get_overviews(query)
+    overviews = overviews_output[1]
 
     # Get the department inquiry
     dept = flask.request.args.get('dept')
