@@ -60,9 +60,12 @@
                 </div>
             </div>
         </div>
+
+        <hr>
         <div class="footer">
         Created by Mohemeen Ahmed and Amel Osman.
         </div>
+        <hr>
         <!-- end of html code-->
 
         <!-- start of javascript code-->
@@ -240,18 +243,11 @@
                 if (request !== null)
                     request.abort();
 
-                try {
-                    request = new XMLHttpRequest();
-                    request.onload = handleOverviewsResponse;
-                    request.onerror = handleError;
-                    request.open('GET', url);
-                    request.send();
-                } catch (error) {
-                    <div class="alert">
-                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                          Error: Failed to fetch data from server
-                    </div>
-                }
+                request = new XMLHttpRequest();
+                request.onload = handleOverviewsResponse;
+                request.onerror = handleError;
+                request.open('GET', url);
+                request.send();
             }
 
             function getResultsDetails(classid){
@@ -262,18 +258,11 @@
                 if (request !== null)
                     request.abort();
 
-                try {
-                    request = new XMLHttpRequest();
-                    request.onload = handleDetailsResponse;
-                    request.onerror = handleError;
-                    request.open('GET', url);
-                    request.send();
-                } catch (error) {
-                    <div class="alert">
-                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                          Error: Failed to fetch data from server
-                    </div>
-                }
+                request = new XMLHttpRequest();
+                request.onload = handleDetailsResponse;
+                request.onerror = handleError;
+                request.open('GET', url);
+                request.send();
             }
 
             let timer = null;
