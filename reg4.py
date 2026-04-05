@@ -20,7 +20,7 @@ app = flask.Flask(__name__, template_folder='.')
 @app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
 def index():
-
+    
     return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
