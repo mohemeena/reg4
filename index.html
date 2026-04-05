@@ -111,10 +111,10 @@
 
             function convertToHtmlDetails(details) {
                 let template = `
+                {{#details}}
                 <table class="table table-striped">
                     <tbody>
                         <h2> Class Details </h2>
-                        {{#details}}
                         <tr>
                             <td><strong>Class Id</strong></td>
                             <td>{{classid}}</td>
@@ -139,6 +139,11 @@
                             <td><strong>Room</strong></td>
                             <td>{{roomnum}}</td>
                         </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-striped">
+                    <tbody>
                         <h2> Course Details </h2>
                         <tr>
                             <td><strong>Course Id</strong></td>
@@ -172,9 +177,10 @@
                             <td>{{prof}}</td>
                             {{/profnames}}
                         </tr>
-                        {{/details}}
                     </tbody>
                 </table>
+                {{/details}}
+
                 `;
                 let map = {details: details}
                 let html = Mustache.render(template, map);
