@@ -64,34 +64,20 @@ def search_results():
     overviews_output = database.get_overviews(query)
     overviews = overviews_output[1]
 
-    json_doc = json.dumps(overviews)
-    response = flask.make_response(json_doc)
-    response.headers['Content-Type'] = 'application/json'
-    return response
-
     # If the database query was successful, display with HTML
-    #if overviews_output[0] is True:
-        # Convert to JSON
-       # json_doc = json.dumps(overviews_output[1])
-
-        # Create response
-        #response = flask.make_response(json_doc)
-        #response.headers['Content-Type'] = 'application/json'
+    if overviews_output[0] is True:
+        json_doc = json.dumps(overviews)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
     # If it was not successful, send to the error page
-
-       #
-        #
-        #
-         ## HANDLE ERRORS ##
-        #
-        #
-        #
-
-    #else:
-        #html_code = flask.render_template('error.html',
-            #error_message = overviews_output[1])
-        #response = flask.make_response(html_code)
+    else:
+        json_doc = json.dumps(overviews_output)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
+        
 
 
 #-----------------------------------------------------------------------
@@ -104,16 +90,14 @@ def regdetails():
 
     classid = flask.request.args.get('classid')
 
-       #
-        #
-        #
-         ## HANDLE ERRORS ##
-        #
-        #
-        #
     # Handling missing classid error
-    #if classid is None or classid == '':
-        #html_code = flask.render_template(
+    if classid is None or classid == '':
+        details_output = [False, "missing class id"]
+        json_doc = json.dumps(details_output)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
+        html_code = flask.render_template(
             #'error.html',
             #error_message='missing classid'
         #)
