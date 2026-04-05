@@ -33,9 +33,7 @@ def index():
 
     json_doc = json.dumps(overviews)
 
-    html_code = flask.render_template('classoverviews.html',
-        dept=dept, coursenum=coursenum,
-        area=area, title=title,
+    html_code = flask.render_template('index.html',
         json_doc = json_doc)
 
     response = flask.make_response(html_code)
