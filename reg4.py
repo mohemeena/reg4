@@ -91,49 +91,38 @@ def regdetails():
     classid = flask.request.args.get('classid')
 
     # Handling missing classid error
-    #if classid is None or classid == '':
-        #details_output = [False, "missing class id"]
-        #json_doc = json.dumps(details_output)
-        #response = flask.make_response(json_doc)
-        #response.headers['Content-Type'] = 'application/json'
-        #return response
-        #html_code = flask.render_template(
-            #'error.html',
-            #error_message='missing classid'
-        #)
-        #response = flask.make_response(html_code)
-        #return response
+    if classid is None or classid == '':
+        details_output = [False, "missing class id"]
+        json_doc = json.dumps(details_output)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
     # Check if classid not integer
-    #try:
-        #int(classid)
-    #except Exception:
-        #html_code = flask.render_template(
-            #'error.html',
-            #error_message='non-integer classid'
-        #)
-        #response = flask.make_response(html_code)
-        #return response
+    try:
+        int(classid)
+    except Exception:
+        details_output = [False, "non-integer class id"]
+        json_doc = json.dumps(details_output)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
+    # Query the database
     details_output = database.get_details(classid)
-    # Convert to JSON
-    json_doc = json.dumps(details_output[1])
+    
+    # If the database inquiry is successful
+    if details_output[0] is True:
+        json_doc = json.dumps(details_output[1])
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
-    # Create response
-    response = flask.make_response(json_doc)
-    response.headers['Content-Type'] = 'application/json'
-
-    # If it was not successful, send to the error page
-    #else:
-        #
-        #
-        #
-         ## HANDLE ERRORS ##
-        #
-        #
-        #
-        #html_code = flask.render_template('error.html',
-            #error_message = f'no class with classid {classid} exists')
-        #response = flask.make_response(html_code)
+    # If it was not successful, return database error messages
+    else:
+        json_doc = json.dumps(details_output)
+        response = flask.make_response(json_doc)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
     return response
