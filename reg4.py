@@ -92,7 +92,7 @@ def regdetails():
 
     # Handling missing classid error
     if classid is None or classid == '':
-        details_output = [False, "missing class id"]
+        details_output = [False, "missing classid"]
         json_doc = json.dumps(details_output)
         response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
@@ -102,7 +102,7 @@ def regdetails():
     try:
         int(classid)
     except Exception:
-        details_output = [False, "non-integer class id"]
+        details_output = [False, "non-integer classid"]
         json_doc = json.dumps(details_output)
         response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
