@@ -21,26 +21,7 @@ app = flask.Flask(__name__, template_folder='.')
 @app.route('/index', methods=['GET'])
 def index():
 
-    query = {
-        'dept': '',
-        'coursenum': '',
-        'area': '',
-        'title': ''
-    }
-
-    overviews_output = database.get_overviews(query)
-    overviews = overviews_output[1]
-
-    json_doc = json.dumps(overviews)
-
-    html_code = flask.render_template('index.html',
-        json_doc = json_doc)
-
-    response = flask.make_response(html_code)
-
-    response.headers['Content-Type'] = 'application/json'
-
-    return response
+    return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
 # Class Overviews Results 
