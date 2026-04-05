@@ -132,7 +132,6 @@ def regdetails():
         #return response
 
     details_output = database.get_details(classid)
-:
     # Convert to JSON
     json_doc = json.dumps(details_output[1])
 
