@@ -20,7 +20,6 @@
         <hr>
         <div class="container">
             <div class="header-text"><h1>Registrar's Office Class Search</h1></div>
-            <hr>
             <form>
                 <div class="form-input">
                     <div class="form-cell">
@@ -40,7 +39,6 @@
                     </div>
                 </div>
             </form>
-            <hr>
         </div>
         <!-- shows the course results from the input-->
         <div id="resultsDiv"></div>
@@ -293,7 +291,8 @@
 
         <style>
            .container{
-            background-color:rgb(66, 100, 184);
+                background-color:rgb(66, 100, 184);
+                position: sticky; top:0;
            }
 
             h1{
@@ -302,9 +301,14 @@
             }
 
             .form-cell{
-                margin-right:30px;
-                float:center;
-                size:110%;
+                float:left;
+                margin-right:20px;
+            }
+
+            .footer{
+               background-color:rgb(66, 100, 184);
+               position: sticky; bottom:0; 
+               color:white;
             }
                
         </style>
