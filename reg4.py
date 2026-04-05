@@ -102,7 +102,7 @@ def regdetails():
     """ Method that extracts classdetails from the database
     and sends to the regdetails.html file to be displayed. """
 
-    classid = flask.request.args.get('buttonclassid')
+    classid = flask.request.args.get('classid')
 
        #
         #
