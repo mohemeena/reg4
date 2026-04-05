@@ -16,7 +16,7 @@
     </head>
     <body>
         <!--sticky header : class search and inputs -->
-        <div class="container-fluid">
+        <div class="flex-container">
             <h1>Registrar's Office: Class Search</h1>
             <form>
                 <div class="form-input">
@@ -288,10 +288,11 @@
         </script>
 
         <style>
-           .container-fluid{
+           .flex-container{
                 background-color:rgb(40, 89, 144);
                 position: sticky; top:0;
                 padding-bottom:50px;
+                display: flex;
            }
 
             h1{
@@ -301,7 +302,6 @@
 
             .form-cell{
                 float:left;
-                size-adjust:30px;
                 margin-right:20px;
                 border-radius: 45px;
             }
