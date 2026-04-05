@@ -3,17 +3,17 @@ html, body {
     margin: 0;
 }
 
-header {
+.header {
    background-color:navy
 
 }
 
-form-cell {
+.form-input {
     float:left;
     margin-right: 30px;
 }
 
-footer {
+.footer {
     text-align: center;
     font-size: 15px;
     background-color:navy
