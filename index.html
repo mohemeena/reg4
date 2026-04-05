@@ -149,12 +149,13 @@
                             <td><strong>Course Id</strong></td>
                             <td>{{courseid}}</td>
                         </tr>
-                        <tr>
-                            {{#deptcoursenums}}
-                            <td><strong>Dept and Number</strong></td>
-                            <td>{{dept}} {{coursenum}}</td>
-                            {{/deptcoursenums}}
-                        </tr>
+                        {{#deptcoursenums}}
+                            <tr>
+                                <td><strong>Dept and Number</strong></td>
+                                <td>{{dept}} {{coursenum}}</td>
+                            </tr>
+                        {{/deptcoursenums}}
+                        
                         <tr>
                             <td><strong>Area</strong></td>
                             <td>{{area}}</td>
@@ -171,12 +172,12 @@
                             <td><strong>Prerequisites</strong></td>
                             <td>{{prereqs}}</td>
                         </tr>
-                        <tr>
-                            {{#profnames}}
-                            <td><strong>Professor</strong></td>
-                            <td>{{prof}}</td>
-                            {{/profnames}}
-                        </tr>
+                        {{#profnames}}
+                            <tr>
+                                <td><strong>Professor</strong></td>
+                                <td>{{profname}}</td>
+                            </tr>
+                        {{/profnames}}
                     </tbody>
                 </table>
                 {{/details}}
