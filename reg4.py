@@ -112,39 +112,36 @@ def regdetails():
         #
         #
     # Handling missing classid error
-    if classid is None or classid == '':
-        html_code = flask.render_template(
-            'error.html',
-            error_message='missing classid'
-        )
-        response = flask.make_response(html_code)
-        return response
+    #if classid is None or classid == '':
+        #html_code = flask.render_template(
+            #'error.html',
+            #error_message='missing classid'
+        #)
+        #response = flask.make_response(html_code)
+        #return response
 
     # Check if classid not integer
-    try:
-        int(classid)
-    except Exception:
-        html_code = flask.render_template(
-            'error.html',
-            error_message='non-integer classid'
-        )
-        response = flask.make_response(html_code)
-        return response
+    #try:
+        #int(classid)
+    #except Exception:
+        #html_code = flask.render_template(
+            #'error.html',
+            #error_message='non-integer classid'
+        #)
+        #response = flask.make_response(html_code)
+        #return response
 
     details_output = database.get_details(classid)
+:
+    # Convert to JSON
+    json_doc = json.dumps(details_output[1])
 
-    # If the database query was successful, display with HTML
-    if details_output[0] is True:
-
-        # Convert to JSON
-        json_doc = json.dumps(details_output[1])
-
-        # Create response
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
+    # Create response
+    response = flask.make_response(json_doc)
+    response.headers['Content-Type'] = 'application/json'
 
     # If it was not successful, send to the error page
-    else:
+    #else:
         #
         #
         #
@@ -152,8 +149,8 @@ def regdetails():
         #
         #
         #
-        html_code = flask.render_template('error.html',
-            error_message = f'no class with classid {classid} exists')
-        response = flask.make_response(html_code)
+        #html_code = flask.render_template('error.html',
+            #error_message = f'no class with classid {classid} exists')
+        #response = flask.make_response(html_code)
 
     return response
