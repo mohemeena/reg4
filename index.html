@@ -7,6 +7,7 @@
         "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
         </script>
 
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="stylesheet" href=
          "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
@@ -15,29 +16,30 @@
     <body>
         <!--sticky header : class search and inputs -->
         <hr>
+        <div class="header">
         <h1>Registrar's Office Class Search</h1>
         <hr>
-
         <form>
         <div class="form-input">
-            <div style="float:left" class="form-cell">
+            <div class="form-cell">
                 <input id="deptInput" type="text" name="dept" value="" placeholder="Department" autofocus>
             </div>
 
-            <div style="float:left" class="form-cell">
+            <div class="form-cell">
                 <input id="coursenumInput" type="text" name="coursenum" placeholder="Number" value="">
             </div>
 
-            <div style="float:left" class="form-cell">
+            <div class="form-cell">
                 <input id="areaInput" type="text" name="area" placeholder="Area" value="">
             </div>
 
-            <div style="float:left" class="form-cell">
-                <input id="titleInput" type="text" name="title" placeholder="Titlte" value="">
+            <div class="form-cell">
+                <input id="titleInput" type="text" name="title" placeholder="Title" value="">
             </div>
         </div>
         </form>
         <hr>
+        </div>
         <!-- shows the course results from the input-->
         <div id="resultsDiv"></div>
 
@@ -62,7 +64,9 @@
         </div>
 
         <hr>
+        <div class="footer">
         Created by Mohemeen Ahmed and Amel Osman.
+        </div>
         <hr>
         <!-- end of html code-->
 
