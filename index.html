@@ -195,12 +195,6 @@
                 }
 
                 let response = JSON.parse(this.response);
-
-                if(!response[0]) {
-                    alert(response[1]);
-                    return;
-                }
-
                 let overviews = response[1];
                 let htmlOverviews = convertToHtmlOverviews(overviews);
                 let resultsDiv = document.getElementById('resultsDiv');
@@ -214,12 +208,6 @@
                 }
 
                 let response = JSON.parse(this.response);
-
-                if(!response[0]) {
-                    alert(response[1]);
-                    return;
-                }
-                
                 let details = response[1];
                 let htmlDetails = convertToHtmlDetails(details);
                 let detailsModalBodyNode = document.getElementById('detailsModalBody');
