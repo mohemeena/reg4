@@ -63,19 +63,10 @@ def regoverviews():
 
     overviews_output = database.get_overviews(query)
 
-    # If the database query was successful, display with HTML
-    if overviews_output[0] is True:
-        json_doc = json.dumps(overviews_output)
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
-        return response
-
-    # If it was not successful, send to the error page
-    else:
-        json_doc = json.dumps(overviews_output)
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
-        return response
+    json_doc = json.dumps(overviews_output)
+    response = flask.make_response(json_doc)
+    response.headers['Content-Type'] = 'application/json'
+    return response
         
 
 
@@ -110,18 +101,7 @@ def regdetails():
     # Query the database
     details_output = database.get_details(classid)
     
-    # If the database inquiry is successful
-    if details_output[0] is True:
-        json_doc = json.dumps(details_output)
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
-        return response
-
-    # If it was not successful, return database error messages
-    else:
-        json_doc = json.dumps(details_output)
-        response = flask.make_response(json_doc)
-        response.headers['Content-Type'] = 'application/json'
-        return response
-
+    json_doc = json.dumps(details_output)
+    response = flask.make_response(json_doc)
+    response.headers['Content-Type'] = 'application/json'
     return response
