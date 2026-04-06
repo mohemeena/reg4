@@ -112,7 +112,7 @@ def regdetails():
     
     # If the database inquiry is successful
     if details_output[0] is True:
-        json_doc = json.dumps(details_output[1])
+        json_doc = json.dumps(details_output)
         response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
         return response
