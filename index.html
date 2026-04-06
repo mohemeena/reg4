@@ -194,7 +194,8 @@
                     return
                 }
 
-                let overviews = JSON.parse(this.response);
+                let response = JSON.parse(this.response);
+                let overviews = response[1];
                 let htmlOverviews = convertToHtmlOverviews(overviews);
                 let resultsDiv = document.getElementById('resultsDiv');
                 resultsDiv.innerHTML = htmlOverviews;
@@ -205,7 +206,8 @@
                     alert('Error: Failed to fetch data from server');
                     return
                 }
-                let details = JSON.parse(this.response);
+                let response = JSON.parse(this.response);
+                let details = response[1];
                 let htmlDetails = convertToHtmlDetails(details);
                 let detailsModalBodyNode = document.getElementById('detailsModalBody');
                 detailsModalBodyNode.innerHTML = htmlDetails;

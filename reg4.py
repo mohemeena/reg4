@@ -62,11 +62,10 @@ def search_results():
     }
 
     overviews_output = database.get_overviews(query)
-    overviews = overviews_output[1]
 
     # If the database query was successful, display with HTML
     if overviews_output[0] is True:
-        json_doc = json.dumps(overviews)
+        json_doc = json.dumps(overviews_output)
         response = flask.make_response(json_doc)
         response.headers['Content-Type'] = 'application/json'
         return response
