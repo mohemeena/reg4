@@ -5,9 +5,9 @@
 """ Flask program that communicates with database.py to import class
 overviews and details, and outputs them to be displayed on the proper
 HTML file. """
+import json
 import flask
 import database
-import json
 
 #-----------------------------------------------------------------------
 app = flask.Flask(__name__, template_folder='.')
@@ -24,7 +24,7 @@ def index():
     return flask.send_file('index.html')
 
 #-----------------------------------------------------------------------
-# Class Overviews Results 
+# Class Overviews Results
 #-----------------------------------------------------------------------
 @app.route('/regoverviews', methods=['GET'])
 def regoverviews():
@@ -67,7 +67,6 @@ def regoverviews():
     response = flask.make_response(json_doc)
     response.headers['Content-Type'] = 'application/json'
     return response
-        
 
 
 #-----------------------------------------------------------------------
@@ -100,7 +99,6 @@ def regdetails():
 
     # Query the database
     details_output = database.get_details(classid)
-    
     json_doc = json.dumps(details_output)
     response = flask.make_response(json_doc)
     response.headers['Content-Type'] = 'application/json'
