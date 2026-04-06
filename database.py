@@ -149,10 +149,7 @@ def get_details(classid):
                 # Create list for profnames
                 profnames = []
                 for row in table4:
-                    prof_dict = {
-                        'profname': row[0]
-                    }
-                    profnames.append(prof_dict)
+                    profnames.append(row[0])
 
                 course_details = {
                         'classid': table1[0][0],
