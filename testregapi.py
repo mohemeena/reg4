@@ -70,12 +70,38 @@ def main():
     request = '/regoverviews?dept=COS&coursenum=2&area=qr&title=intro'
     run_test(serverurl, request)
 
-    # Add more tests here.
+    # Add more tests here - overviews
+    request = '/regoverviews?dept=&coursenum=&area=&title='
+    run_test(serverurl, request)
 
+    # empty input test
+    request = '/regoverviews?dept=&coursenum=&area=&title='
+    run_test(serverurl, request)
+
+    # wildcard char - percent
+    request = '/regoverviews?dept=COS&coursenum=333&area=&title=C%25Science'
+    run_test(serverurl, request)
+
+    #underscore char
+    request = '/regoverviews?dept=COS&coursenum=217&area=qr&title=C_Science'
+    run_test(serverurl, request)
+
+    #details
     request = '/regdetails?classid=8321'
     run_test(serverurl, request)
 
-    # Add more tests here.
+    # Add more tests here. - details
+    request = '/regdetails?classid=99999'
+    run_test(serverurl, request)
+
+    request = '/regdetails?classid='
+    run_test(serverurl, request)
+
+    request = '/regdetails'
+    run_test(serverurl, request)
+
+    request = '/regdetails?classid=abcd'
+    run_test(serverurl, request)
 
 if __name__ == '__main__':
     main()

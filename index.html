@@ -92,7 +92,7 @@
                 <tbody>
                     {{#overviews}}
                     <tr>
-                        <td><button id="buttonclassid" onclick="getResultsDetails('{{classid}}')">{{classid}}</button></td>
+                        <td><button id="button{{classid}}" onclick="getResultsDetails('{{classid}}')">{{classid}}</button></td>
                         <td>{{dept}}</td>
                         <td>{{coursenum}}</td>
                         <td>{{area}}</td>
@@ -110,7 +110,7 @@
             function convertToHtmlDetails(details) {
                 let template = `
                 {{#details}}
-                <table class="table table-striped">
+                <table id="classDetailsTable" class="table table-striped">
                     <tbody>
                         <h2> Class Details </h2>
                         <tr>
@@ -140,7 +140,7 @@
                     </tbody>
                 </table>
 
-                <table class="table table-striped">
+                <table id="courseDetailsTable" class="table table-striped">
                     <tbody>
                         <h2> Course Details </h2>
                         <tr>
@@ -195,6 +195,12 @@
                 }
 
                 let response = JSON.parse(this.response);
+
+                if(!response[0]) {
+                    alert(response[1]);
+                    return;
+                }
+
                 let overviews = response[1];
                 let htmlOverviews = convertToHtmlOverviews(overviews);
                 let resultsDiv = document.getElementById('resultsDiv');
@@ -206,7 +212,14 @@
                     alert('Error: Failed to fetch data from server');
                     return
                 }
+
                 let response = JSON.parse(this.response);
+
+                if(!response[0]) {
+                    alert(response[1]);
+                    return;
+                }
+                
                 let details = response[1];
                 let htmlDetails = convertToHtmlDetails(details);
                 let detailsModalBodyNode = document.getElementById('detailsModalBody');
