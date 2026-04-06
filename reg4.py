@@ -26,8 +26,8 @@ def index():
 #-----------------------------------------------------------------------
 # Class Overviews Results 
 #-----------------------------------------------------------------------
-@app.route('/searchresults', methods=['GET'])
-def search_results():
+@app.route('/regoverviews', methods=['GET'])
+def regoverviews():
     """ Method that extracts overviews from the database and
     sends to the classoverviews.html file to be displayed. """
 
