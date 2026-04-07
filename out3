@@ -1,0 +1,174 @@
+------------------------------------------------------------------------
+dept: |COS|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+dept: |COS|
+coursenum: |2|
+area: |qr|
+title: |intro|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |Independent Study|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |Independent Study |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |Independent Study  |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: | Independent Study|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |  Independent Study|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+dept: |COS|
+coursenum: |3|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: |qr|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: |Qr|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: |-a |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: |qr st|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: | |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: |qr|
+dept: ||
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+area: ||
+dept: |cos|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+dept: |-x|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+dept: |cos|
+area: |qr|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |Studies in Religion and Philosophy: Religion & the Fragility of American Democracy: Emerson & Baldwin|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |African American History from Reconstruction to|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |C_S|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |c%s|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: |-c|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+dept: | |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+coursenum: | |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+title: | |
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+coursenum: |hi|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+
+------------------------------------------------------------------------
+coursenum: |9 8|
+Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#overviewsTable")
+

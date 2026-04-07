@@ -35,19 +35,16 @@ def regoverviews():
     dept = flask.request.args.get('dept')
     if dept is None:
         dept = ''
-    dept = dept.strip()
 
     # Get the course number inquiry
     coursenum = flask.request.args.get('coursenum')
     if coursenum is None:
         coursenum = ''
-    coursenum = coursenum.strip()
 
     # Get the area inquiry
     area = flask.request.args.get('area')
     if area is None:
         area = ''
-    area = area.strip()
 
     # Get the title inquiry
     title = flask.request.args.get('title')
