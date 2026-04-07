@@ -1,6 +1,6 @@
 #-----------------------------------------------------------------------
 # testregdetails.py
-# Author: Bob Dondero
+# Author: Bob Dondero, Amel Osman, Mohemeen Ahmed
 #-----------------------------------------------------------------------
 
 import sys
