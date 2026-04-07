@@ -29,7 +29,7 @@ def index():
 @app.route('/regoverviews', methods=['GET'])
 def regoverviews():
     """ Method that extracts overviews from the database and
-    sends to the classoverviews.html file to be displayed. """
+    sends to the index.html file to be displayed. """
 
     # Get the department inquiry
     dept = flask.request.args.get('dept')
@@ -75,7 +75,7 @@ def regoverviews():
 @app.route('/regdetails', methods=['GET'])
 def regdetails():
     """ Method that extracts classdetails from the database
-    and sends to the regdetails.html file to be displayed. """
+    and sends to the index.html file to be displayed. """
 
     classid = flask.request.args.get('classid')
 

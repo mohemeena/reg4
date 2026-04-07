@@ -2,7 +2,7 @@
 # database.py
 # Author: Amel Osman & Mohemeen Ahmed
 #-----------------------------------------------------------------------
-""" Database program that communicates with the reg3.py program to 
+""" Database program that communicates with the reg4.py program to 
 extract and output relevant class overviews or details. """
 import sqlite3
 import contextlib
