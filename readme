@@ -25,6 +25,20 @@ for testing. Overall, we believe we did our best to drive and navigate
 this assignment and both left with a good understanding! 
 
 Mohemeen:
+In our assignment, I drove adapting the index.html file, so using
+the mustache template in order to create all the tables while Amel
+also navigated and helped in the adaptation and being able
+to display the classes dynamically using the AJAX calls. While I drove
+the creation of the sticky header, footer,
+ and creating the modal, Amel was able to help me navigate and 
+ we worked on making it function and present properly. I drove for the
+getoverviews and getdetails functions within index.html while
+Amel drove for the converttohtml functions. I also worked on the
+ error handling and making the alert popups in JS. I also did drive
+the styling through CSS but Amel navigated and helped point out differences.
+We debugged the rest of the errors together, and Amel was able to
+fix some of the routing and table id errors, and I helped with some
+testing errors as well.
 
 
 A description of the help that you received from people other

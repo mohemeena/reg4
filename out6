@@ -13,25 +13,6 @@ Description	This is a course about the practice of programming. Programming is m
 Prerequisites	COS 217 and COS 226.
 Professor	Brian W. Kernighan
 ------------------------------------------------------------------------
-Locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for get_by_text("").first
-    - locator resolved to <h4 class="modal-title">Registrar's Office</h4>
-  - attempting click action
-    2 × waiting for element to be visible, enabled and stable
-      - element is not visible
-    - retrying click action
-    - waiting 20ms
-    2 × waiting for element to be visible, enabled and stable
-      - element is not visible
-    - retrying click action
-      - waiting 100ms
-    58 × waiting for element to be visible, enabled and stable
-       - element is not visible
-     - retrying click action
-       - waiting 500ms
-
-------------------------------------------------------------------------
 Class Id	8749
 Days	MW
 Start time	01:30 PM
@@ -127,23 +108,3 @@ Title	General Computer Science
 Description	An introduction to computer science in the context of scientific, engineering, and commercial applications. The goal of the course is to teach basic principles and practical issues, while at the same time preparing students to use computers effectively for applications in computer science, physics, biology, chemistry, engineering, and other disciplines. Topics include: hardware and software systems; programming in Java; algorithms and data structures; fundamental principles of computation; and scientific computing, including simulation, optimization, and data analysis. Two lectures, two precepts.
 Prerequisites	
 Professor	Larry L. Peterson
-------------------------------------------------------------------------
-Class Id	9999
-Days	T
-Start time	02:30 PM
-End time	04:20 PM
-Building	NA185
-Room	206
-Course Id	4435
-Dept and Number	HLS 365
-Dept and Number	THR 365
-Area	LA
-Title	Re:Staging the Greeks
-Description	Re:Staging the Greeks, a collaboration between the Theater Program of the Lewis Center for the Arts and the Program in Hellenic Studies, will begin with this acting/directing workshop investigating how to stage ancient Greek plays on the contemporary stage. On Tuesdays, we will study some of the plays, the contexts in which they were first performed, and approaches taken by theater directors over the last few decades. On Fridays, we'll be on our feet, exploring the play's performative possibilities for ourselves.
-Prerequisites	THR 201, 205, 301, 311, or 317 OR significant theatrical experience. By application and audition. Students interested in auditioning for THR 365 should contact professor Tim Vasen directly. During the spring break registered students will take a required study trip to Athens.
-Professor	Timothy K. Vasen
-------------------------------------------------------------------------
-Locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for get_by_text("abcd").first
-
