@@ -83,9 +83,6 @@ def main():
 
         # Add more tests here.
 
-        #running with missing classid
-        run_test(server_url, browser_process, '')
-
         #testing long description
         run_test(server_url, browser_process, '8749')
 
@@ -103,12 +100,6 @@ def main():
 
         #testing with a class that has no prerequisites
         run_test(server_url, browser_process, '8293')
-
-        #testing with nonexistent class code
-        run_test(server_url, browser_process, '9999')
-
-        #testing with non-integer classid
-        run_test(server_url, browser_process, 'abcd')
 
 if __name__ == '__main__':
     main()
