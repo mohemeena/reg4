@@ -1,0 +1,135 @@
+------------------------------------------------------------------------
+Class Id	8321
+Days	TTh
+Start time	11:00 AM
+End time	12:20 PM
+Building	FRIEN
+Room	006
+Course Id	3672
+Dept and Number	COS 333
+Area	
+Title	Advanced C%Science Programming Techniques
+Description	This is a course about the practice of programming. Programming is more than just writing code. Programmers must also assess tradeoffs, choose among design alternatives, debug and test, improve performance, and maintain software written by themselves & others. At the same time, they must be concerned with compatibility, robustness, and reliability, while meeting specifications. Students will have the opportunity to develop these skills by working on their own code and in group projects.
+Prerequisites	COS 217 and COS 226.
+Professor	Brian W. Kernighan
+------------------------------------------------------------------------
+Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#classDetailsTable") to be visible
+
+------------------------------------------------------------------------
+Class Id	8749
+Days	MW
+Start time	01:30 PM
+End time	02:20 PM
+Building	MCCOH
+Room	66
+Course Id	3871
+Dept and Number	EPS 300
+Dept and Number	POL 384
+Area	SA
+Title	European Politics and Society in the Twentieth Century
+Description	The course aims to cover the critical developments of twentieth-century Europe and the consolidation of democracy in European countries. It will deal with the legacy of the two world wars, Nazism, Stalinism, the Cold War, the legacy of colonialism and decolonization, the birth and development of the European Community, the development of the welfare state, the problems confronting the European Union (immigration, enlargement, political institutions, military role), and the varieties of democratic institutions in Europe.
+Prerequisites	
+Professor	Jan-Werner Mueller
+Professor	Philip G. Nord
+------------------------------------------------------------------------
+Class Id	8749
+Days	MW
+Start time	01:30 PM
+End time	02:20 PM
+Building	MCCOH
+Room	66
+Course Id	3871
+Dept and Number	EPS 300
+Dept and Number	POL 384
+Area	SA
+Title	European Politics and Society in the Twentieth Century
+Description	The course aims to cover the critical developments of twentieth-century Europe and the consolidation of democracy in European countries. It will deal with the legacy of the two world wars, Nazism, Stalinism, the Cold War, the legacy of colonialism and decolonization, the birth and development of the European Community, the development of the welfare state, the problems confronting the European Union (immigration, enlargement, political institutions, military role), and the varieties of democratic institutions in Europe.
+Prerequisites	
+Professor	Jan-Werner Mueller
+Professor	Philip G. Nord
+------------------------------------------------------------------------
+Class Id	10030
+Days	W
+Start time	01:30 PM
+End time	04:20 PM
+Building	NA185
+Room	102
+Course Id	4449
+Dept and Number	VIS 222
+Area	LA
+Title	Introductory Sculpture
+Description	A studio introduction to sculpture, particularly the study of form, concept, fabrication and the influence of a wide variety of materials and processes on sculpture and its consequences. Students will develop an understanding of contemporary sculpture and a basic facilities in woodworking, metalworking, carving and casting.
+Prerequisites	
+------------------------------------------------------------------------
+Class Id	8749
+Days	MW
+Start time	01:30 PM
+End time	02:20 PM
+Building	MCCOH
+Room	66
+Course Id	3871
+Dept and Number	EPS 300
+Dept and Number	POL 384
+Area	SA
+Title	European Politics and Society in the Twentieth Century
+Description	The course aims to cover the critical developments of twentieth-century Europe and the consolidation of democracy in European countries. It will deal with the legacy of the two world wars, Nazism, Stalinism, the Cold War, the legacy of colonialism and decolonization, the birth and development of the European Community, the development of the welfare state, the problems confronting the European Union (immigration, enlargement, political institutions, military role), and the varieties of democratic institutions in Europe.
+Prerequisites	
+Professor	Jan-Werner Mueller
+Professor	Philip G. Nord
+------------------------------------------------------------------------
+Class Id	9032
+Days	W
+Start time	07:30 PM
+End time	08:50 PM
+Building	ICAHN
+Room	ATR
+Course Id	4026
+Dept and Number	CHM 233
+Dept and Number	COS 233
+Dept and Number	ISC 233
+Dept and Number	MOL 233
+Dept and Number	PHY 233
+Area	ST
+Title	An Integrated, Quantitative Introduction to the Natural Sciences II
+Description	An integrated, mathematically and computationally sophisticated introduction to physics and chemistry, drawing on examples from biological systems. This year-long 4 course sequence is a multi-disciplinary course taught across 4 departments with the following faculty involved in teaching the course: W. Bialek , C. Callan, J. Shaevitz (PHY); D. Botstein (MOL); M. Singh (COS); E. Carter (MAE).
+Prerequisites	Familiarity with calculus at the level of MAT 103/104 or Advanced Placement Calculus BC, solid high school physics and chemistry courses. Students must have completed ISC/CHM/COS/MOL/PHY 231 and 232 in the Fall.
+Professor	Curtis G. Callan
+Professor	David Botstein
+Professor	Mona Singh
+------------------------------------------------------------------------
+Class Id	8293
+Days	TTh
+Start time	11:00 AM
+End time	11:50 AM
+Building	FRIEN
+Room	101
+Course Id	3668
+Dept and Number	COS 126
+Dept and Number	EGR 126
+Area	QR
+Title	General Computer Science
+Description	An introduction to computer science in the context of scientific, engineering, and commercial applications. The goal of the course is to teach basic principles and practical issues, while at the same time preparing students to use computers effectively for applications in computer science, physics, biology, chemistry, engineering, and other disciplines. Topics include: hardware and software systems; programming in Java; algorithms and data structures; fundamental principles of computation; and scientific computing, including simulation, optimization, and data analysis. Two lectures, two precepts.
+Prerequisites	
+Professor	Larry L. Peterson
+------------------------------------------------------------------------
+Class Id	9999
+Days	T
+Start time	02:30 PM
+End time	04:20 PM
+Building	NA185
+Room	206
+Course Id	4435
+Dept and Number	HLS 365
+Dept and Number	THR 365
+Area	LA
+Title	Re:Staging the Greeks
+Description	Re:Staging the Greeks, a collaboration between the Theater Program of the Lewis Center for the Arts and the Program in Hellenic Studies, will begin with this acting/directing workshop investigating how to stage ancient Greek plays on the contemporary stage. On Tuesdays, we will study some of the plays, the contexts in which they were first performed, and approaches taken by theater directors over the last few decades. On Fridays, we'll be on our feet, exploring the play's performative possibilities for ourselves.
+Prerequisites	THR 201, 205, 301, 311, or 317 OR significant theatrical experience. By application and audition. Students interested in auditioning for THR 365 should contact professor Tim Vasen directly. During the spring break registered students will take a required study trip to Athens.
+Professor	Timothy K. Vasen
+------------------------------------------------------------------------
+Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("abcd").first
+

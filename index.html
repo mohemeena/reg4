@@ -73,7 +73,7 @@
         <script>
             'use strict';
 
-            
+            // Overviews 
             function convertToHtmlOverviews(overviews) {
                 let template = `
                 <table id="overviewsTable" class="table table-striped">
@@ -103,13 +103,14 @@
                 let html = Mustache.render(template, map);
                 return html;
             }
-
+            
+            // Details
             function convertToHtmlDetails(details) {
                 let template = `
                 {{#details}}
+                <h2> Class Details </h2>
                 <table id="classDetailsTable" class="table table-striped">
                     <tbody>
-                        <h2> Class Details </h2>
                         <tr>
                             <td><strong>Class Id</strong></td>
                             <td>{{classid}}</td>
@@ -136,10 +137,10 @@
                         </tr>
                     </tbody>
                 </table>
-
+                
+                <h2> Course Details </h2>
                 <table id="courseDetailsTable" class="table table-striped">
                     <tbody>
-                        <h2> Course Details </h2>
                         <tr>
                             <td><strong>Course Id</strong></td>
                             <td>{{courseid}}</td>
